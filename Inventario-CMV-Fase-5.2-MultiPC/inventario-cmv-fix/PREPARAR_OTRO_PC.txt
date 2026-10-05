@@ -1,0 +1,32 @@
+INVENTARIO CMV - USO EN OTRO COMPUTADOR
+========================================
+
+Para usar Inventario CMV en un computador nuevo:
+
+1. Descomprime la carpeta completa.
+2. Copia desde el PC principal el archivo llamado exactamente .env
+   y pegalo en esta carpeta, junto a package.json y ABRIR_INVENTARIO.bat.
+3. Haz doble clic en ABRIR_INVENTARIO.bat.
+4. Si Node.js no esta instalado, el mismo archivo abrira la pagina oficial.
+   Instala la version LTS y vuelve a hacer doble clic.
+5. La primera vez se instalaran automaticamente los componentes del proyecto.
+6. Despues se abrira Inventario CMV en el navegador.
+
+En los siguientes usos basta con hacer doble clic en ABRIR_INVENTARIO.bat.
+
+IMPORTANTE SOBRE .env
+---------------------
+En nuestra configuracion el archivo .env debe contener unicamente:
+- VITE_SUPABASE_URL
+- VITE_SUPABASE_ANON_KEY (clave publica anon/publishable)
+- VITE_PUBLIC_APP_URL
+
+Nunca copies una service_role key dentro del proyecto del navegador.
+Nunca guardes contrasenas personales en .env.
+
+NOTA
+----
+Esta modalidad sirve para pruebas y uso local. Para varios computadores de
+forma permanente, la opcion recomendada sera publicar Inventario CMV una sola
+vez en Netlify. Asi cada equipo podra abrir una URL sin instalar Node.js ni
+copiar el proyecto.

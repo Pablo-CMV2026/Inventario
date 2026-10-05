@@ -1,0 +1,22 @@
+INVENTARIO CMV — CÓMO ABRIRLO
+
+IMPORTANTE:
+El archivo index.html NO se abre con doble clic porque este proyecto usa React + Vite.
+index.html es la entrada del proyecto, pero necesita un servidor de desarrollo.
+
+FORMA MÁS SIMPLE EN WINDOWS
+1. Descomprime la carpeta completa.
+2. Haz doble clic en INICIAR_EN_WINDOWS.bat.
+3. Si Windows pregunta, permite la ejecución.
+4. La primera vez instalará dependencias con npm (requiere Internet).
+5. Se abrirá http://localhost:5173 en el navegador.
+
+REQUISITO
+- Node.js LTS instalado: https://nodejs.org/
+
+SIN SUPABASE CONFIGURADO
+La aplicación abrirá y mostrará la pantalla de acceso, pero el ingreso estará deshabilitado hasta que configuremos Supabase.
+
+PARA SOLO VER UNA MAQUETA SIN INSTALAR NADA
+Abre ABRIR_VISTA_PREVIA.html con doble clic.
+Esa vista es solo visual: no usa base de datos, cámara, autenticación ni QR real.

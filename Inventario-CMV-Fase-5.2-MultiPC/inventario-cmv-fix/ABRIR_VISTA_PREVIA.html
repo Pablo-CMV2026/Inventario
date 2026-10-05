@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Inventario CMV — Vista previa</title>
+<style>
+:root{--green:#0F5A36;--gold:#E8C547;--bg:#f5f7f5;--card:#fff;--text:#173126;--muted:#6b7770;--line:#dde5df}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
+.shell{min-height:100vh;display:grid;grid-template-columns:250px 1fr}.side{background:var(--green);color:white;padding:24px 18px}.brand{display:flex;gap:12px;align-items:center;margin-bottom:30px}.crest{width:48px;height:48px;border:2px solid var(--gold);border-radius:14px;display:grid;place-items:center;font-weight:800;color:var(--gold)}.brand h1{font-size:18px;margin:0}.brand small{opacity:.75}.nav a{display:block;padding:12px 14px;border-radius:10px;color:white;text-decoration:none;margin:4px 0}.nav a.active{background:rgba(255,255,255,.14)}.nav a span{opacity:.8;margin-right:8px}.main{padding:28px 30px}.top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:22px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--green);font-weight:800}.top h2{font-size:30px;margin:5px 0}.top p{color:var(--muted);margin:0}.badge{padding:8px 12px;background:#fff8d6;border:1px solid #ead783;border-radius:999px;font-size:12px}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 1px 2px rgba(0,0,0,.03)}.card small{color:var(--muted)}.card strong{display:block;font-size:28px;margin-top:8px}.wide{grid-column:span 2}.section{margin-top:22px}.section h3{margin:0 0 12px}.actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.action{background:white;border:1px solid var(--line);border-radius:14px;padding:16px}.action b{display:block;margin-bottom:5px}.action p{margin:0;color:var(--muted);font-size:13px}.notice{margin-top:24px;border-left:4px solid var(--gold);background:#fffbea;padding:12px 14px;border-radius:8px;font-size:13px}.bar{height:8px;background:#e8ede9;border-radius:999px;overflow:hidden;margin-top:12px}.bar>i{display:block;width:72%;height:100%;background:var(--green)}
+@media(max-width:850px){.shell{grid-template-columns:1fr}.side{display:none}.main{padding:20px}.cards{grid-template-columns:repeat(2,1fr)}.actions{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.cards,.actions{grid-template-columns:1fr}.wide{grid-column:span 1}.top{display:block}.badge{display:inline-block;margin-top:12px}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="side">
+    <div class="brand"><div class="crest">CMV</div><div><h1>Inventario CMV</h1><small>Colegio Manso de Velasco</small></div></div>
+    <nav class="nav">
+      <a class="active" href="#"><span>⌂</span> Dashboard</a>
+      <a href="#"><span>▦</span> Inventario</a>
+      <a href="#"><span>▣</span> Etiquetas</a>
+      <a href="#"><span>⌁</span> Recorridos</a>
+      <a href="#"><span>!</span> Pendientes</a>
+      <a href="#"><span>⚙</span> Configuración</a>
+    </nav>
+  </aside>
+  <main class="main">
+    <div class="top"><div><div class="eyebrow">Corporación Educacional Los Nepar de Cauquenes</div><h2>Resumen del inventario</h2><p>Estado general y accesos rápidos.</p></div><div class="badge">VISTA PREVIA · SIN DATOS REALES</div></div>
+    <div class="cards">
+      <div class="card"><small>Total inventario</small><strong>—</strong></div>
+      <div class="card"><small>Activos</small><strong>—</strong></div>
+      <div class="card"><small>En reparación</small><strong>—</strong></div>
+      <div class="card"><small>Dados de baja</small><strong>—</strong></div>
+      <div class="card wide"><small>Etiquetas disponibles</small><strong>—</strong><div class="bar"><i></i></div></div>
+      <div class="card wide"><small>Pendientes de verificación</small><strong>—</strong><p style="color:var(--muted);margin:4px 0 0">Se activará con los recorridos físicos.</p></div>
+    </div>
+    <section class="section"><h3>Accesos rápidos</h3><div class="actions">
+      <div class="action"><b>Escanear QR</b><p>Abrir un bien o iniciar su registro.</p></div>
+      <div class="action"><b>Buscar bien</b><p>Por código, nombre, serie o dependencia.</p></div>
+      <div class="action"><b>Generar etiquetas</b><p>Reservar una nueva tanda correlativa.</p></div>
+      <div class="action"><b>Nuevo recorrido</b><p>Verificación física por dependencia.</p></div>
+    </div></section>
+    <div class="notice"><b>Esta es una maqueta local.</b> Sirve para revisar la dirección visual sin instalar nada. La aplicación real requiere ejecutarse con Vite y, para funcionar con datos, conectarse a Supabase.</div>
+  </main>
+</div>
+</body>
+</html>
