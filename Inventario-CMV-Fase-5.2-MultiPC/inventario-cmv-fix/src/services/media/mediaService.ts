@@ -101,6 +101,10 @@ export async function listAssetPhotos(assetId: string): Promise<AssetPhoto[]> {
       .createSignedUrl(row.storage_path, 60 * 60)
 
     assertNoError(signedError)
+    if (!signed) {
+      throw new Error('No fue posible generar la URL temporal de la fotografía.')
+    }
     return { ...row, signedUrl: signed.signedUrl }
   }))
 }
+
